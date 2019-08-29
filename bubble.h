@@ -9,7 +9,16 @@ class BubbleSort : public Sort {
         BubbleSort(int *elements, size_t size) : Sort(elements, size) {}
 
         void execute() {
-            // TODO
+            int temp;
+            for(int i=size-1; i>=0 ; i--){
+                for(int j=0; j<i;j++){
+                    if(elements[j]>elements[j+1]){
+                        temp = elements[j];
+                        elements[j] = elements[j+1];
+                        elements[j+1] = temp;
+                    }
+                }
+            }
         }
 
         inline string name() { return "BubbleSort"; }
