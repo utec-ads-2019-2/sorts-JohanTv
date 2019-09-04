@@ -53,8 +53,8 @@ class MergeSort : public Sort {
                 k++;
             }
 
-            delete L;
-            delete R;
+            delete[] L;
+            delete[] R;
         }
 
 
